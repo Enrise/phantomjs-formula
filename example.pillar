@@ -1,0 +1,4 @@
+phantomjs:
+  version: 2.1.1
+  architecture: x86_64
+  checksum: 1c947d57fce2f21ce0b43fe2ed7cd361
