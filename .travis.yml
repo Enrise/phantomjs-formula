@@ -8,7 +8,7 @@ env:
     - BS_ECHO_DEBUG=1
     - SALT_ARGS="-l debug --local --retcode-passthrough --pillar-root=.salt/pillar --file-root=$PWD"
   matrix:
-    - STATE=nginx
+    - STATE=phantomjs
 
 before_install:
   - sudo apt-get update
@@ -30,4 +30,3 @@ script:
   - sudo -E salt-call state.sls $STATE $SALT_ARGS > /tmp/second
   - cat /tmp/second
   - bash -c '! grep -q "^Not Run:" /tmp/second'
-0
