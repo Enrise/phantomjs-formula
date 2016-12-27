@@ -5,7 +5,8 @@
 
 phantomjs_binary:
   archive.extracted:
-    - name: /opt/{{ release_name }}
+    - name: /opt
+    - if_missing: /opt/{{ release_name }}
     - source: https://bitbucket.org/ariya/phantomjs/downloads/{{ release_name }}.tar.bz2
     - archive_format: tar
     {%- if checksum != False %}
